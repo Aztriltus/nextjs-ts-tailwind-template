@@ -1,8 +1,10 @@
+import { CoreLayout } from "@/modules/common/components/CoreLayout";
 import PageHead from "@/modules/common/components/PageHead";
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 import Head from "next/head";
 
 export const App = ({ Component, pageProps }) => {
+  const Layout = Component.layout ? Component.layout : CoreLayout;
   return (
     <>
       <Head>
@@ -12,7 +14,9 @@ export const App = ({ Component, pageProps }) => {
         />
         <PageHead />
       </Head>
-      <Component {...pageProps} />;
+      <Layout>
+        <Component {...pageProps} />;
+      </Layout>
     </>
   );
 };
