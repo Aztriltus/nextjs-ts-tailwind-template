@@ -1,5 +1,6 @@
+import Document, { Head, Html, Main, NextScript } from "next/document";
+
 import Favicon from "@/modules/common/components/FavIcon";
-import Document, { Html, Main, Head, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
