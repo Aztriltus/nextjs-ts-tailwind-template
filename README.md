@@ -31,11 +31,16 @@ Use this component to quickly bootstrap the meta tags for the page
 
 ## Packages used
 **ESLint related**
+
 https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/parser
+
 https://github.com/import-js/eslint-plugin-import/
+
 https://github.com/lydell/eslint-plugin-simple-import-sort
 
 ## VSCode extensions
 ESLint: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
 Prettier: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
 Tailwind CSS IntelliSense: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
