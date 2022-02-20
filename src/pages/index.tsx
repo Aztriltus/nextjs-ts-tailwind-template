@@ -1,5 +1,5 @@
-import { CrossIcon } from "@/modules/common/components/CustomIcon";
-import PageHead from "@/modules/common/components/PageHead";
+import { CrossIcon } from "@/common/components/CustomIcon";
+import PageHead from "@/common/components/PageHead";
 
 export default function Home() {
   return (
