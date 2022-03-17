@@ -27,10 +27,10 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Format the code
-        uses: npm run prettier
+        run: npm run prettier
       - name: Check the code style
-        uses: npm run lint:eslint
+        run: npm run lint:eslint
       - name: Check the types
-        uses: npm run check-types
+        run: npm run check-types
       - name: Build the project
-        uses: npm run build
+        run: npm run build
