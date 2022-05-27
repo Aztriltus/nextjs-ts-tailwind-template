@@ -17,7 +17,7 @@ export const App = ({ Component, pageProps }) => {
         <PageHead />
       </Head>
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
     </>
   );
