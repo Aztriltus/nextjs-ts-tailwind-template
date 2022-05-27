@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Install dependencies with yarn:
+
+```bash
+yarn
+```
+
+Prepare husky
+
+```bash
+yarn prepare
+```
+
+Start local development server:
+
 
 ```bash
 yarn dev
@@ -18,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Sorted imports e.g. alphabetical and in groups. Avoids git diff changes when imports are sorted differently between people
 - Requires vscode extensions like eslint and prettier
 - Use ./src as src directory for nextjs 
-- Have a <meta> related reusable component PageHead to use in each page and also some default favicons 
+- Includes a <meta> reusable component PageHead to use in each page and also some default favicons 
 
 ## Using the PageHead component
 Use this component to quickly bootstrap the meta tags for the page
