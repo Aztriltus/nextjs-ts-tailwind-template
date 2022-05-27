@@ -29,7 +29,7 @@ const Favicon = (): JSX.Element => {
       <meta content="/favicon/browserconfig.xml" name="msapplication-config" />
       <meta content="#111618" name="theme-color" />
     </>
-  )
-}
+  );
+};
 
-export default Favicon
+export default Favicon;

@@ -1,16 +1,16 @@
-import { CrossIcon } from "@/common/components/CustomIcon";
 import PageHead from "@/common/components/PageHead";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="h-full">
       <PageHead
         append={false}
         description="Home page description"
         name="Home"
       />
-      <CrossIcon />
-      Hello world
+      <section className="grid place-content-center h-full">
+        <span>Hello world</span>
+      </section>
     </div>
   );
 }
