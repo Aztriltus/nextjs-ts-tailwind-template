@@ -7,7 +7,7 @@ interface Props extends ComponentPropsWithoutRef<"svg"> {
   name?: string;
 }
 
-const CustomIcon = (props: PropsWithChildren<Props>): JSX.Element => {
+export const CustomIcon = (props: PropsWithChildren<Props>): JSX.Element => {
   const {
     children,
     width = 24,
@@ -38,5 +38,3 @@ export const CrossIcon = ({ ...props }: Props) => (
     <CrossSvg />
   </CustomIcon>
 );
-
-export default CustomIcon;
