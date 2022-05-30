@@ -1,8 +1,8 @@
-import { PropsWithChildren } from "react";
+import { ComponentPropsWithoutRef, PropsWithChildren } from "react";
 
 import CrossSvg from "./svg/Cross";
 
-interface Props extends React.SVGAttributes<SVGElement> {
+interface Props extends ComponentPropsWithoutRef<"svg"> {
   size?: number | string; // width and height will both be set as the same value
   name?: string;
 }
