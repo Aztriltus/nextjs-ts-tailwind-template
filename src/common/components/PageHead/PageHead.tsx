@@ -7,7 +7,7 @@ interface Props {
   append?: boolean;
 }
 
-const PageHead = ({
+export const PageHead = ({
   name,
   description,
   append = true,
@@ -32,5 +32,3 @@ const PageHead = ({
     </Head>
   );
 };
-
-export default PageHead;

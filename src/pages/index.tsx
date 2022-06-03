@@ -1,4 +1,4 @@
-import PageHead from "@/common/components/PageHead";
+import { PageHead } from "@/common/components/PageHead";
 
 export default function Home() {
   return (

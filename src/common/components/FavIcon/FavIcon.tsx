@@ -1,4 +1,4 @@
-const Favicon = (): JSX.Element => {
+export const Favicon = (): JSX.Element => {
   return (
     <>
       <link
@@ -31,5 +31,3 @@ const Favicon = (): JSX.Element => {
     </>
   );
 };
-
-export default Favicon;

@@ -1,13 +1,13 @@
-import { PropsWithChildren } from "react";
+import { ComponentPropsWithoutRef, PropsWithChildren } from "react";
 
 import CrossSvg from "./svg/Cross";
 
-interface Props extends React.SVGAttributes<SVGElement> {
+interface Props extends ComponentPropsWithoutRef<"svg"> {
   size?: number | string; // width and height will both be set as the same value
   name?: string;
 }
 
-const CustomIcon = (props: PropsWithChildren<Props>): JSX.Element => {
+export const CustomIcon = (props: PropsWithChildren<Props>): JSX.Element => {
   const {
     children,
     width = 24,
@@ -38,5 +38,3 @@ export const CrossIcon = ({ ...props }: Props) => (
     <CrossSvg />
   </CustomIcon>
 );
-
-export default CustomIcon;
