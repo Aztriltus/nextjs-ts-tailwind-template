@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 
 import Head from "next/head";
 
-import { CoreLayout } from "@/common/components/CoreLayout/CoreLayout";
+import { CoreLayout } from "@/common/components/CoreLayout";
 import { PageHead } from "@/common/components/PageHead";
 
 export const App = ({ Component, pageProps }) => {
