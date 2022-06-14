@@ -12,7 +12,24 @@ module.exports = {
         reservedFirst: true,
       },
     ],
-    "simple-import-sort/imports": "error",
+    "import/order": [
+      "warn",
+      {
+        pathGroups: [
+          {
+            pattern: "@/common/**",
+            group: "external",
+            position: "after",
+          },
+          {
+            pattern: "@/modules/**",
+            group: "external",
+            position: "after",
+          },
+        ],
+        "newlines-between": "always",
+      },
+    ],
     "simple-import-sort/exports": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
