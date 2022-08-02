@@ -10,10 +10,7 @@ export const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <meta
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
-          name="viewport"
-        />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <PageHead />
       </Head>
       <Layout>
