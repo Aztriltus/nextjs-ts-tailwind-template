@@ -30,7 +30,12 @@ module.exports = {
         "newlines-between": "always",
       },
     ],
-    "array-callback-return": "error",
+    "array-callback-return": [
+      "error",
+      {
+        checkForEach: true,
+      },
+    ],
     "simple-import-sort/exports": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
