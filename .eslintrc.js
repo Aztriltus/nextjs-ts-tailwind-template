@@ -30,6 +30,7 @@ module.exports = {
         "newlines-between": "always",
       },
     ],
+    "array-callback-return": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
