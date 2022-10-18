@@ -1,32 +1,36 @@
 import Head from "next/head";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useMemo } from "react";
 
-interface Props {
+export interface PageHeadProps {
   name?: string;
   description?: string;
-  append?: boolean;
+  removeTitleAppend?: boolean;
 }
+
+const appName = "Thala Labs";
 
 export const PageHead = ({
   name,
   description,
-  append = true,
+  removeTitleAppend = false,
   children,
-}: PropsWithChildren<Props>): JSX.Element => {
-  const appName = "Your App";
-  const pageName = () => {
-    if (append) {
+}: PropsWithChildren<PageHeadProps>) => {
+  const pageName = useMemo(() => {
+    if (!removeTitleAppend) {
       return name ? `${name} | ${appName}` : appName;
     }
     return name ?? appName;
-  };
+  }, [name, removeTitleAppend]);
+
   const pageDesc = description ?? appName;
+
   return (
     <Head>
       <meta charSet="utf-8" />
-      <title>{pageName()}</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>{pageName}</title>
       <meta content={pageDesc} name="description" />
-      <meta content={pageName()} name="og:title" />
+      <meta content={pageName} name="og:title" />
       <meta content={pageDesc} name="og:description" />
       {children}
     </Head>
