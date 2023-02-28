@@ -8,7 +8,7 @@ export default function Home() {
         description="Home page description"
         name="Home"
       />
-      <section className="grid place-content-center h-full">
+      <section className="grid h-full place-content-center">
         <span>Hello world</span>
       </section>
     </div>

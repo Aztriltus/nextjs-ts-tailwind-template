@@ -1,4 +1,4 @@
-export const Favicon = (): JSX.Element => {
+export const Favicon = () => {
   return (
     <>
       <link

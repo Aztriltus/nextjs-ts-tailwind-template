@@ -1,3 +1,3 @@
 export const CoreLayout = ({ children }) => {
-  return <div className="min-h-full h-full relative">{children}</div>;
+  return <div className="relative h-full min-h-full">{children}</div>;
 };
