@@ -13,7 +13,7 @@ export const CustomIcon = ({
   viewBox = "0 0 24 24",
   name,
   ...rest
-}: CustomIconProps): JSX.Element => {
+}: CustomIconProps) => {
   return (
     <svg
       aria-labelledby={name}

@@ -1,4 +1,4 @@
-const Error404 = (): JSX.Element => {
+const Error404 = () => {
   return (
     <div className="container bg-white">
       <p className="text-base font-semibold text-gray-800">
