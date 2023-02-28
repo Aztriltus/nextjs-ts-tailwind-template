@@ -40,6 +40,10 @@ module.exports = {
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
+    "react/no-unknown-property": [
+      "error",
+      { ignore: ["css", "global", "jsx"] },
+    ],
   },
   root: true,
   parser: "@typescript-eslint/parser",
