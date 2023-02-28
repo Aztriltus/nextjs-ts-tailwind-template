@@ -25,3 +25,7 @@ When you are going to share the any components or files across modules, create t
 1. React Hooks, Context, etc
 1. Shared data, etc
 1. Code related to external libraries
+
+### Check subfolders for more README
+
+Please only use the subfolders created. It'll be good to keep them even if they are empty so in the future, they could be useful
