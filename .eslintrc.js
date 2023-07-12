@@ -15,6 +15,7 @@ module.exports = {
     "import/order": [
       "warn",
       {
+        alphabetize: { order: "asc", caseInsensitive: true },
         pathGroups: [
           {
             pattern: "@/common/**",
