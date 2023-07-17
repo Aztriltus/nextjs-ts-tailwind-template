@@ -11,7 +11,7 @@
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,scss}'",
     "prepare": "husky install",
     "check-types": "tsc",
-    "validate": "npm run prettier & npm run lint:eslint & npm run check-types & npm run build"
+    "validate": "yarn run prettier & yarn run lint:eslint & yarn run check-types & yarn run build"
   },
   "dependencies": {
     "next": "^13.4.9",
@@ -41,7 +41,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "npm run lint:eslint"
+      "yarn run lint:eslint"
     ],
     "*.{js,jsx,ts,tsx,scss}": [
       "prettier --write"
