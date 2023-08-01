@@ -1,4 +1,4 @@
-import { CustomIcon, CustomIconProps } from "./CustomIcon";
+import { CustomIcon, CustomIconProps } from './CustomIcon';
 
 export const CrossIcon = (props: CustomIconProps) => {
   return (

@@ -1,10 +1,10 @@
-import "@/common/styles/globals.scss";
+import '@/common/styles/globals.scss';
 
-import { type NextComponentType } from "next";
-import { type AppProps } from "next/app";
+import { type NextComponentType } from 'next';
+import { type AppProps } from 'next/app';
 
-import { CoreLayout } from "@/common/components/CoreLayout";
-import { PageHead } from "@/common/components/PageHead";
+import { CoreLayout } from '@/common/components/CoreLayout';
+import { PageHead } from '@/common/components/PageHead';
 
 type ComponentProps = {
   layout?: () => JSX.Element;
