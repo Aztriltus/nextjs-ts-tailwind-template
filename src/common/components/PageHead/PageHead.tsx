@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { PropsWithChildren, useMemo } from "react";
+import Head from 'next/head';
+import { PropsWithChildren, useMemo } from 'react';
 
 export interface PageHeadProps {
   name?: string;
@@ -8,13 +8,13 @@ export interface PageHeadProps {
   titleAppendSeparator?: string;
 }
 
-const appName = "Your App Here";
+const appName = 'Your App Here';
 
 export const PageHead = ({
   name,
   description,
   removeTitleAppend = false,
-  titleAppendSeparator = "|",
+  titleAppendSeparator = '|',
   children,
 }: PropsWithChildren<PageHeadProps>) => {
   const pageName = useMemo(() => {
@@ -24,7 +24,7 @@ export const PageHead = ({
     return name ?? appName;
   }, [name, removeTitleAppend, titleAppendSeparator]);
 
-  const pageDesc = description ?? "Your app description";
+  const pageDesc = description ?? 'Your app description';
 
   return (
     <Head>
