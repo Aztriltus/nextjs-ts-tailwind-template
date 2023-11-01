@@ -28,5 +28,5 @@
   // Show in vscode "Problems" tab when there are errors
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   // Use absolute import for typescript files
-  "typescript.preferences.importModuleSpecifier": "project-relative"
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
