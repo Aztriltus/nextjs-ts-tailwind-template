@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config} */
-const config = {
+const prettierConfigs = {
   singleQuote: true,
   trailingComma: 'all',
   arrowParens: 'always',
@@ -9,4 +9,4 @@ const config = {
   plugins: ['prettier-plugin-tailwindcss'],
 };
 
-export default config;
+export default prettierConfigs;
