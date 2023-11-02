@@ -36,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Use this component to quickly bootstrap the meta tags for the page
 
 1. Go to PageHead component and update the `appName` const to your project's title
-2. Use PageHead in your /pages/\*_/_ files
+2. Use PageHead in your `/pages/**/*` files
 3. Feel free to update the props as you see fit
 
 ## Using the CustomIcon component
