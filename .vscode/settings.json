@@ -23,6 +23,7 @@
   },
   "editor.rulers": [80],
   "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
     "source.fixAll.eslint": true
   },
   // Show in vscode "Problems" tab when there are errors
