@@ -22,10 +22,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.rulers": [80],
-  "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true
-  },
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll",
+    "source.organizeImports"
+  ],
   // Show in vscode "Problems" tab when there are errors
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   // Use absolute import for typescript files
