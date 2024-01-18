@@ -7,6 +7,10 @@
     "typescript",
     "typescriptreact"
   ],
+  // ensures that vscode uses the version installed within the project.
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // supress eslint warnings for tailwind related directives
+  "css.customData": [".vscode/tailwind.json"],
   // prettier extension setting
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -31,4 +35,9 @@
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   // Use absolute import for typescript files
   "typescript.preferences.importModuleSpecifier": "non-relative"
+  //  Intellisense for taiwind variants: https://www.tailwind-variants.org/docs/getting-started#intellisense-setup-optional
+  // (uncomment when needed)
+  // "tailwindCSS.experimental.classRegex": [
+  //   ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  // ]
 }
