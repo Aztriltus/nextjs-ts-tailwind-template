@@ -1,21 +1,21 @@
 # Getting Started
 
-Install dependencies with yarn:
+Install dependencies with pnpm:
 
 ```bash
-yarn
+pnpm install
 ```
 
 Prepare husky
 
 ```bash
-yarn prepare
+pnpm prepare
 ```
 
 Start local development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
