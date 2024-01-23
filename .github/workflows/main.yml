@@ -1,36 +1,42 @@
-name: Build
-
+name: Main
 on:
   push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
-  build:
+  main:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v2
-      - name: Configure yarn caching
-        uses: actions/cache@v2
+      - uses: actions/checkout@v4
         with:
-          path: ~/.yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/workflows/prettier.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "yarn"
-      - name: Install dependencies
-        run: yarn install
+          version: 8
+      - name: Restore cached npm dependencies
+        id: cache-dependencies-restore
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            node_modules
+            ~/.cache/Cypress # needed for the Cypress binary
+          key: npm-dependencies-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm install --frozen-lockfile
+      - name: Cache npm dependencies
+        id: cache-dependencies-save
+        uses: actions/cache/save@v3
+        with:
+          path: |
+            node_modules
+            ~/.cache/Cypress # needed for the Cypress binary
+          key: ${{ steps.cache-dependencies-restore.outputs.cache-primary-key }}
       - name: Format the code
-        run: yarn run prettier
+        run: pnpm run prettier
       - name: Check the code style
-        run: yarn run lint:eslint
+        run: pnpm run lint
       - name: Check the types
-        run: yarn run check-types
+        run: pnpm run check-types
       - name: Build the project
-        run: yarn run build
+        run: pnpm run build
