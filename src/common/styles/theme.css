@@ -1,0 +1,9 @@
+/* FONTS */
+@theme {
+  --font-sans: var(--font-inter);
+}
+
+/* COLORS */
+@theme {
+  --color-primary: #000;
+}

@@ -1,4 +1,4 @@
-name: Main
+name: ci
 on:
   push:
     branches:
@@ -12,9 +12,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - uses: pnpm/action-setup@v4
       - name: Restore cached npm dependencies
         id: cache-dependencies-restore
         uses: actions/cache/restore@v3
