@@ -25,19 +25,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Absolute file referencing e.g. "@/modules/components/Hello.tsx" via tsconfig
 - Modular file structure e.g."@/modules/common", "@/modules/ModuleName"
 - Dynamic layout support for reusing layout component across pages without re-declaring on each page
-- Using sass for tailwind config, and some boilerplate e.g. setting html, body elements, etc
+- Using css for tailwind config, and some boilerplate e.g. setting html, body elements, etc
 - Sorted imports e.g. alphabetical and in groups. Avoids git diff changes when imports are sorted differently between people
 - Requires vscode extensions like eslint and prettier
 - Use ./src as src directory for nextjs
-- Includes a `<meta>` reusable component PageHead to use in each page and also some default favicons
 
-## Using the PageHead component
+## Adding favicon 
 
-Use this component to quickly bootstrap the meta tags for the page
-
-1. Go to PageHead component and update the `appName` const to your project's title
-2. Use PageHead in your `/pages/**/*` files
-3. Feel free to update the props as you see fit
+1. Go to: <https://realfavicongenerator.net/>
+2. Upload your favicon.ico file
+3. Click next after configurations
+4. Click on "NextJS" tab
+5. Follow the instructions
 
 ## Using the CustomIcon component
 
