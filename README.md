@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Requires vscode extensions like eslint and prettier
 - Use ./src as src directory for nextjs
 
-## Using the Favicon component
+## Adding favicon 
 
 1. Go to: <https://realfavicongenerator.net/>
 2. Upload your favicon.ico file
