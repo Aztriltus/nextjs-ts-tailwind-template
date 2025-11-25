@@ -6,12 +6,6 @@ Install dependencies with pnpm:
 pnpm install
 ```
 
-Prepare husky
-
-```bash
-pnpm prepare
-```
-
 Start local development server:
 
 ```bash

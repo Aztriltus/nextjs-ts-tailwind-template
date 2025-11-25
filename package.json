@@ -9,7 +9,6 @@
     "next:lint": "next lint",
     "lint": "pnpm run next:lint && eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,scss}'",
-    "prepare": "husky install",
     "check-types": "tsc",
     "validate": "pnpm run prettier & pnpm run lint & pnpm run check-types && pnpm run build"
   },
@@ -33,7 +32,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
