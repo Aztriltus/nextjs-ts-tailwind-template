@@ -1,11 +1,8 @@
-## Description
+### Changes
 
-One liner description (or quick point form) of what was done
+<!-- Add a bullet point of changes here -->
 
-### Screenshots / Videos
 
-- Include a screenshot or video of work done
+### Preview
 
-### How to test?
-
-- Add a url where reviewers can go to see changes
+<!-- Add a preview of the changes here -->
