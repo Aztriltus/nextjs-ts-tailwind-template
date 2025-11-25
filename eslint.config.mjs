@@ -12,6 +12,7 @@ const eslintConfig = [
   ...compat.config({
     extends: ['next/core-web-vitals', 'next/typescript'],
     plugins: ['simple-import-sort', 'import'],
+    ignorePatterns: ['next-env.d.ts', '.next/types/**/*.ts'],
     rules: {
       '@next/next/no-img-element': 'off',
       'react/jsx-sort-props': [
