@@ -1,8 +1,9 @@
-import type { Metadata, Viewport } from 'next';
 import type { PropsWithChildren } from 'react';
+import type { Metadata, Viewport } from 'next';
 
 import { inter } from '@/common/fonts/inter';
 import { cn } from '@/common/functions/cn';
+
 import '@/common/styles/main.css';
 
 export const viewport: Viewport = {
