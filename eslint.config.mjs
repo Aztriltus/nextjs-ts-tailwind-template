@@ -34,22 +34,25 @@ const eslintConfig = defineConfig([
       'import/order': [
         'error',
         {
-          alphabetize: { order: 'asc', caseInsensitive: true },
-          pathGroups: [
-            {
-              pattern: '@/common/**',
-              group: 'external',
-              position: 'after',
-            },
-            {
-              pattern: '@/modules/**',
-              group: 'external',
-              position: 'after',
-            },
+          groups: [
+            // Side effect imports (e.g., import './styles.css')
+            ['^\\u0000'],
+            // External packages (react, next, etc.) - type imports are handled automatically
+            ['^react', '^next', '^@?\\w'],
+            // Internal packages (@/common, @/modules)
+            ['^@/common', '^@/modules'],
+            // Parent imports
+            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+            // Other relative imports
+            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+            // Style imports
+            ['^.+\\.s?css$'],
           ],
-          'newlines-between': 'always',
         },
       ],
+      'simple-import-sort/exports': 'error',
+      // Disable import/order since we're using simple-import-sort
+      'import/order': 'off',
       'array-callback-return': [
         'error',
         {
@@ -70,7 +73,6 @@ const eslintConfig = defineConfig([
           allowWithName: 'Props$',
         },
       ],
-      'simple-import-sort/exports': 'error',
       'import/first': 'error',
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
@@ -81,11 +83,12 @@ const eslintConfig = defineConfig([
       ],
     },
   },
-  // Disable import/order for config files - Prettier handles sorting
+  // Disable simple-import-sort for config files - Prettier handles sorting
   {
     files: ['*.config.{js,mjs,ts}', 'eslint.config.*'],
     rules: {
-      'import/order': 'off',
+      'simple-import-sort/imports': 'off',
+      'simple-import-sort/exports': 'off',
     },
   },
 ]);
