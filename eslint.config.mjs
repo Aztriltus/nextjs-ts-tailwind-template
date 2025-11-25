@@ -1,18 +1,25 @@
-import { FlatCompat } from '@eslint/eslintrc';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import importPlugin from 'eslint-plugin-import';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
-  baseDirectory: import.meta.dirname,
-});
-
-/**
- * @type {import("eslint").Linter.Config}
- */
-const eslintConfig = [
-  ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript'],
-    plugins: ['simple-import-sort', 'import'],
-    ignorePatterns: ['next-env.d.ts', '.next/types/**/*.ts'],
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+  ]),
+  {
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+      import: importPlugin,
+    },
     rules: {
       '@next/next/no-img-element': 'off',
       'react/jsx-sort-props': [
@@ -25,7 +32,7 @@ const eslintConfig = [
         },
       ],
       'import/order': [
-        'warn',
+        'error',
         {
           alphabetize: { order: 'asc', caseInsensitive: true },
           pathGroups: [
@@ -73,7 +80,14 @@ const eslintConfig = [
         { ignore: ['css', 'global', 'jsx'] },
       ],
     },
-  }),
-];
+  },
+  // Disable import/order for config files - Prettier handles sorting
+  {
+    files: ['*.config.{js,mjs,ts}', 'eslint.config.*'],
+    rules: {
+      'import/order': 'off',
+    },
+  },
+]);
 
 export default eslintConfig;
