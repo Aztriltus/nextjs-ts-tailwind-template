@@ -1,14 +1,14 @@
-import { Metadata, Viewport } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { PropsWithChildren } from 'react';
 
-import { CoreLayout } from '@/common/components/CoreLayout';
-import { inter } from '@/common/fonts';
+import { inter } from '@/common/fonts/inter';
 import { cn } from '@/common/functions/cn';
 import '@/common/styles/main.css';
 
 export const viewport: Viewport = {
   themeColor: 'black',
-};
+}
+
 
 export const metadata: Metadata = {
   title: 'Your App Name | Home',
@@ -27,12 +27,11 @@ export const metadata: Metadata = {
   },
 };
 
-const GlobalLayout = ({ children }: PropsWithChildren) => {
+const GlobalLayout = ({ children }: PropsWithChildren<unknown>) => {
   return (
     <html className={cn(inter.variable)} lang="en">
-      <meta content="VAPI" name="apple-mobile-web-app-title" />
       <body>
-        <CoreLayout>{children}</CoreLayout>
+        {children}
       </body>
     </html>
   );
