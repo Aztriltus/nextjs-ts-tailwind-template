@@ -8,8 +8,7 @@ import '@/common/styles/main.css';
 
 export const viewport: Viewport = {
   themeColor: 'black',
-}
-
+};
 
 export const metadata: Metadata = {
   title: 'Your App Name | Home',
@@ -31,9 +30,7 @@ export const metadata: Metadata = {
 const GlobalLayout = ({ children }: PropsWithChildren<unknown>) => {
   return (
     <html className={cn(inter.variable)} lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 };
