@@ -31,7 +31,7 @@ jobs:
             ~/.cache/Cypress # needed for the Cypress binary
           key: ${{ steps.cache-dependencies-restore.outputs.cache-primary-key }}
       - name: Format the code
-        run: pnpm run prettier
+        run: pnpm run fmt
       - name: Check the code style
         run: pnpm run lint
       - name: Check the types
